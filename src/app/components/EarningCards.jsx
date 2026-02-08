@@ -8,8 +8,8 @@ const { Title, Paragraph } = Typography;
 
 export default function EarningCards() {
   return (
-    <Row gutter={16}>
-      <Col span={6}>
+    <Row gutter={[16, 16]}>
+      <Col xs={24} sm={12} md={12} lg={6} xl={6}>
         <Card variant="borderless">
           <Paragraph type="secondary">Youtube</Paragraph>
 
@@ -22,7 +22,7 @@ export default function EarningCards() {
           </Flex>
         </Card>
       </Col>
-       <Col span={6}>
+       <Col xs={24} sm={12} md={12} lg={6} xl={6}>
         <Card variant="borderless">
           <Paragraph type="secondary">Facebook</Paragraph>
 
@@ -35,7 +35,7 @@ export default function EarningCards() {
           </Flex>
         </Card>
       </Col>
-       <Col span={6}>
+       <Col xs={24} sm={12} md={12} lg={6} xl={6}>
         <Card variant="borderless">
           <Paragraph type="secondary">Website</Paragraph>
 
@@ -48,7 +48,7 @@ export default function EarningCards() {
           </Flex>
         </Card>
       </Col>
-       <Col span={6}>
+       <Col xs={24} sm={12} md={12} lg={6} xl={6}>
         <Card variant="borderless">
           <Paragraph type="secondary">Buy me a coffee</Paragraph>
 

@@ -26,13 +26,26 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AntdRegistry><Layout style={{ height: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-          <AppHeader />
-          <Layout hasSider={true} style={{ flex: 1, overflow: 'hidden' }}>
-            <AppSider /><Layout style={{ padding: "20px", overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-          <Content style={{ flex: 1, overflow: 'hidden' }}>{children}</Content></Layout>
+        <AntdRegistry>
+          <Layout style={{ height: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+            <AppHeader />
+            <Layout hasSider={true} style={{ flex: 1, overflow: 'hidden' }}>
+              <AppSider />
+              <Layout style={{ 
+                padding: 'clamp(12px, 2vw, 20px)', 
+                overflow: 'auto' 
+              }}>
+                <Content style={{ 
+                  minHeight: '100%',
+                  maxWidth: '100%',
+                  overflowX: 'hidden'
+                }}>
+                  {children}
+                </Content>
+              </Layout>
+            </Layout>
           </Layout>
-          </Layout></AntdRegistry>
+        </AntdRegistry>
       </body>
     </html>
   );

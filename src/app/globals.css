@@ -2,10 +2,9 @@
 
 html, body, #__next{
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 * {
@@ -20,4 +19,63 @@ html, body, #__next{
 html {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Responsive image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile-first responsive layout */
+@media (max-width: 576px) {
+  body {
+    font-size: 13px;
+  }
+  
+  .ant-layout-header {
+    padding: 0 12px !important;
+  }
+
+  .ant-card {
+    font-size: 13px;
+  }
+
+  .ant-card-head-title {
+    font-size: 14px !important;
+  }
+
+  .ant-typography {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .ant-layout-header {
+    padding: 0 16px !important;
+  }
+
+  .ant-layout-content {
+    padding: 12px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ant-layout-sider {
+    position: relative;
+  }
+}
+
+/* Ensure all content is responsive */
+.ant-row {
+  width: 100%;
+}
+
+/* Fix overflow issues */
+.ant-layout {
+  overflow-x: hidden;
 }

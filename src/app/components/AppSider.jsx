@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu } from 'antd'
 import Sider from 'antd/es/layout/Sider'
 import Link from 'next/link'
@@ -9,9 +9,23 @@ import React from 'react'
 import { DollarOutlined, WalletOutlined, LikeOutlined, ShoppingOutlined, LineChartOutlined, SaveOutlined, FileTextOutlined } from '@ant-design/icons'
 
 function AppSider() {
-
   const pathname = usePathname()
   const [selectedKey, setSelectedKey] = React.useState('')
+  const [collapsed, setCollapsed] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 768
+      setIsMobile(mobile)
+      setCollapsed(mobile)
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   React.useEffect(()=>{
     items.forEach((item)=>{
       if(pathname.startsWith(item.path)){
@@ -73,8 +87,20 @@ function AppSider() {
   return (
     
    
-   <Sider width={200} style={{ background: 'white', height: '100%', overflowY: 'auto' }} >
-   <Menu items={items} ></Menu>
+   <Sider 
+     width={200} 
+     collapsedWidth={isMobile ? 0 : 80}
+     collapsed={collapsed}
+     onCollapse={(value) => setCollapsed(value)}
+     breakpoint="lg"
+     style={{ 
+       background: 'white', 
+       height: '100%', 
+       overflowY: 'auto',
+       transition: 'all 0.2s'
+     }} 
+   >
+   <Menu items={items} selectedKeys={[selectedKey]} mode="inline" />
 
    </Sider>
   )

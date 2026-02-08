@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <>
    <EarningCards/>
-   <Row gutter={16} style={{marginBottom:16 , marginTop:16}}>
-      <Col span={12}><TopYoutube /></Col>
-        <Col span={12}><TopWebsites /></Col>
+   <Row gutter={[16, 16]} style={{marginBottom:16 , marginTop:16}}>
+      <Col xs={24} sm={24} md={12} lg={12} xl={12}><TopYoutube /></Col>
+      <Col xs={24} sm={24} md={12} lg={12} xl={12}><TopWebsites /></Col>
    </Row>
    <LastEarnings/>
  

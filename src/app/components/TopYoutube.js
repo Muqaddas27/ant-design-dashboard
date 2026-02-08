@@ -5,15 +5,15 @@ import Image from 'next/image'
 
 function TopYoutube() {
   return (
-   <Card title="Top Earnings from Youtube">
+   <Card title="Top Earnings from Youtube" style={{ height: '100%' }}>
     <Row gutter={[3, 16]}>
         <Col span={24}> 
          <Row gutter={16} align="middle">
-            <Col span={4}>
-             <Image src="/admb5.avif" alt="Dashboard" width={100} height={40} style={{ objectFit: 'cover', border: '1px solid #d9d9d9', borderRadius: '4px'}} />
+            <Col xs={6} sm={5} md={4} lg={4} xl={4}>
+             <Image src="/admb5.avif" alt="Dashboard" width={100} height={40} style={{ objectFit: 'cover', border: '1px solid #d9d9d9', borderRadius: '4px', width: '100%', height: 'auto' }} />
             </Col>
-            <Col span={20}>
-          <p style={{marginBottom:2}}>Dashboard using HTML and CSS</p>
+            <Col xs={18} sm={19} md={20} lg={20} xl={20}>
+          <p style={{marginBottom:2, fontSize: 'clamp(12px, 2vw, 14px)', lineHeight: '1.4'}}>Dashboard using HTML and CSS</p>
           <Progress percent={67} size="small" /> 
         </Col>
          </Row>
@@ -22,11 +22,11 @@ function TopYoutube() {
       <Row gutter={[3, 16]}>
         <Col span={24}> 
          <Row gutter={16} align="middle">
-            <Col span={4}>
-             <Image src="/dashb.2.webp" alt="Dashboard" width={100} height={40} style={{ objectFit: 'cover', border: '1px solid #d9d9d9', borderRadius: '4px'}} />
+            <Col xs={6} sm={5} md={4} lg={4} xl={4}>
+             <Image src="/dashb.2.webp" alt="Dashboard" width={100} height={40} style={{ objectFit: 'cover', border: '1px solid #d9d9d9', borderRadius: '4px', width: '100%', height: 'auto' }} />
             </Col>
-            <Col span={20}>
-          <p style={{marginBottom:2}}>Create a Modern Website with HTML and CSS | Step-by-Step Guide</p>
+            <Col xs={18} sm={19} md={20} lg={20} xl={20}>
+          <p style={{marginBottom:2, fontSize: 'clamp(12px, 2vw, 14px)', lineHeight: '1.4'}}>Create a Modern Website with HTML and CSS | Step-by-Step Guide</p>
           <Progress percent={55} size="small" /> 
         </Col>
          </Row>
@@ -35,11 +35,11 @@ function TopYoutube() {
       <Row gutter={[3, 16]}>
         <Col span={24}> 
          <Row gutter={16} align="middle">
-            <Col span={4}>
-             <Image src="/dashb6.png" alt="Dashboard" width={100} height={40} style={{ objectFit: 'cover', border: '1px solid #d9d9d9', borderRadius: '4px'}} />
+            <Col xs={6} sm={5} md={4} lg={4} xl={4}>
+             <Image src="/dashb6.png" alt="Dashboard" width={100} height={40} style={{ objectFit: 'cover', border: '1px solid #d9d9d9', borderRadius: '4px', width: '100%', height: 'auto' }} />
             </Col>
-            <Col span={20}>
-          <p style={{marginBottom:2}}>How to add background image in Next JS with image optimization</p>
+            <Col xs={18} sm={19} md={20} lg={20} xl={20}>
+          <p style={{marginBottom:2, fontSize: 'clamp(12px, 2vw, 14px)', lineHeight: '1.4'}}>How to add background image in Next JS with image optimization</p>
           <Progress percent={28} size="small" /> 
         </Col>
          </Row>
